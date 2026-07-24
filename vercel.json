@@ -1,7 +1,7 @@
 {
   "services": {
     "frontend": {
-      "root": "frontend",
+      "root": "shopnest",
       "framework": "vite"
     },
     "backend": {
@@ -9,21 +9,5 @@
       "framework": "express",
       "entrypoint": "index.js"
     }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": {
-        "service": "backend",
-        "path": "/api/$1"
-      }
-    },
-    {
-      "source": "/(.*)",
-      "destination": {
-        "service": "shopnest",
-        "path": "/$1"
-      }
-    }
-  ]
+  }
 }
